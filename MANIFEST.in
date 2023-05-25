@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include hubspot_integration *.css
+recursive-include hubspot_integration *.csv
+recursive-include hubspot_integration *.html
+recursive-include hubspot_integration *.ico
+recursive-include hubspot_integration *.js
+recursive-include hubspot_integration *.json
+recursive-include hubspot_integration *.md
+recursive-include hubspot_integration *.png
+recursive-include hubspot_integration *.py
+recursive-include hubspot_integration *.svg
+recursive-include hubspot_integration *.txt
+recursive-exclude hubspot_integration *.pyc
