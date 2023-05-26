@@ -1,0 +1,41 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"JaZN7fRqGf\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Hubspot</span>\",\"col\":12}},{\"id\":\"Z1lyO9FJdW\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Deals\",\"col\":3}},{\"id\":\"kVt3M8JmV9\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Hubspot Configuration\",\"col\":3}}]",
+ "creation": "2023-05-26 12:28:42.043088",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "share",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Hubspot",
+ "links": [],
+ "modified": "2023-05-26 12:30:58.917584",
+ "modified_by": "Administrator",
+ "module": "Hubspot Integration",
+ "name": "Hubspot",
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 26.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Deals",
+   "link_to": "Deal",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Hubspot Configuration",
+   "link_to": "Hubspot Configuration",
+   "type": "DocType"
+  }
+ ],
+ "title": "Hubspot"
+}

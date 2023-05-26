@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "field:deal_id",
+ "creation": "2023-05-25 11:44:29.044083",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "name1",
+  "deal_id",
+  "amount",
+  "status",
+  "close_date",
+  "create_date"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "deal_id",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Deal ID",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "columns": 4,
+   "fieldname": "name1",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Name",
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "create_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Create Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "close_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Close Date",
+   "read_only": 1
+  },
+  {
+   "columns": 1,
+   "default": "NEW",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "NEW\nPROCESSED"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2023-05-25 22:38:57.747100",
+ "modified_by": "Administrator",
+ "module": "Hubspot Integration",
+ "name": "Deal",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
