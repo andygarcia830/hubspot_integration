@@ -4,10 +4,10 @@
   "doctype": "Client Script",
   "dt": "Sales Order",
   "enabled": 1,
-  "modified": "2023-05-26 11:26:01.224141",
+  "modified": "2023-05-26 13:46:55.331335",
   "module": "Hubspot Integration",
   "name": "Populate Item From Input Parameter",
-  "script": "frappe.ui.form.on('Sales Order', {\n\tonload(frm) {\n\t\t// your code here\n\t\tvar amount=new URLSearchParams(window.location.search).get('amount')\n\t\tvar date=new URLSearchParams(window.location.search).get('transaction_date')\n\t\tconsole.log('AMOUNT='+amount)\n\t\tfrm.doc.transaction_date=date\n\t\tfrm.clear_table('items');\n\t\tlet entry = frm.add_child(\"items\");\n        entry.item_code = 'Software Services';\n        entry.qty=1\n        entry.rate=amount\n        entry.amount=amount\n        \n\t\t\n\t}\n})",
+  "script": "frappe.ui.form.on('Sales Order', {\n\tonload(frm) {\n\t\t// your code here\n\t\tvar amount=new URLSearchParams(window.location.search).get('amount')\n\t\tvar date=new URLSearchParams(window.location.search).get('transaction_date')\n\t\tvar deal=new URLSearchParams(window.location.search).get('deal')\n\t\tconsole.log('AMOUNT='+amount)\n\t\tfrm.doc.transaction_date=date\n\t\tfrm.clear_table('items');\n\t\tlet entry = frm.add_child(\"items\");\n        entry.item_code = 'Software Services';\n        entry.qty=1;\n        entry.rate=amount;\n        entry.amount=amount;\n        entry.uom='Nos';\n        entry.item_name='Software Services';\n        entry.description='Software Services';\n        \n\t\t\n\t},\n\t\n\tbefore_save(frm){\n\t    var deal=new URLSearchParams(window.location.search).get('deal')\n\t    frappe.call({method:'hubspot_integration.hubspot_integration.doctype.deal.deal.enable_customer', args:{\n                    name:frm.doc.customer\n                },\n                callback:function(r){\n                    console.log(r.message.name)\n                  \n                }\n                });\n        frappe.call({method:'hubspot_integration.hubspot_integration.doctype.deal.deal.process_deal', args:{\n                    name:deal\n                },\n                callback:function(r){\n                    console.log(r.message.name)\n                  \n                }\n                });\n\t}\n\t\n})",
   "view": "Form"
  }
 ]

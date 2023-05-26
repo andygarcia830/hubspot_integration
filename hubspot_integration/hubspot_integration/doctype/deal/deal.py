@@ -45,3 +45,23 @@ def search_db(tok):
 	if len(list) > 0:
 		return list[0]
 	return {'name':''}
+
+
+
+@frappe.whitelist()
+def enable_customer(name):
+	doc = frappe.get_doc('Customer',name)
+	doc.disabled=0
+	print(f'CUSTOMER={doc}')
+	doc.save()
+
+
+
+
+@frappe.whitelist()
+def process_deal(name):
+	doc = frappe.get_doc('Deal',name)
+	doc.status='PROCESSED'
+	print(f'DEAL={doc}')
+	doc.save()
+
