@@ -113,23 +113,23 @@ app_license = "MIT"
 # Scheduled Tasks
 # ---------------
 
-# scheduler_events = {
-#	"all": [
-#		"hubspot_integration.tasks.all"
-#	],
-#	"daily": [
-#		"hubspot_integration.tasks.daily"
-#	],
-#	"hourly": [
-#		"hubspot_integration.tasks.hourly"
-#	],
-#	"weekly": [
-#		"hubspot_integration.tasks.weekly"
-#	],
-#	"monthly": [
-#		"hubspot_integration.tasks.monthly"
-#	],
-# }
+scheduler_events = {
+	"all": [
+		"hubspot_integration.tasks.all"
+	],
+	"daily": [
+		"hubspot_integration.tasks.daily"
+	],
+	"hourly": [
+		"hubspot_integration.tasks.hourly"
+	],
+	"weekly": [
+		"hubspot_integration.tasks.weekly"
+	],
+	"monthly": [
+		"hubspot_integration.tasks.monthly"
+	],
+}
 
 # Testing
 # -------
