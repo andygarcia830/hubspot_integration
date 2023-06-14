@@ -33,5 +33,7 @@ frappe.ui.form.on("Hubspot Configuration", {
             
         );
 
+        
+
 	},
 });

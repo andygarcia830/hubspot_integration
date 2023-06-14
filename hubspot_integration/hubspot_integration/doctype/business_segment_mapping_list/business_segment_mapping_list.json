@@ -1,0 +1,52 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "hash",
+ "creation": "2023-06-14 15:14:55.872029",
+ "default_view": "List",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "won_deal_stage_code",
+  "business_segment",
+  "business_segment_naming_series"
+ ],
+ "fields": [
+  {
+   "fieldname": "won_deal_stage_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Won Deal Stage Code",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_segment",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Business Segment",
+   "options": "Business Segment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "business_segment_naming_series",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Business Segment Naming Series",
+   "reqd": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2023-06-14 16:47:56.936870",
+ "modified_by": "Administrator",
+ "module": "Hubspot Integration",
+ "name": "Business Segment Mapping List",
+ "naming_rule": "Random",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

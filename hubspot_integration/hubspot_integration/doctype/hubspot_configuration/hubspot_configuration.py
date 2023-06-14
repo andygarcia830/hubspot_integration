@@ -15,18 +15,21 @@ class HubspotConfiguration(Document):
 
 def fetch_won_deals():
 	doc = frappe.get_doc('Hubspot Configuration')
-	dealstage = doc.deal_stage_search_value
+	mapping_list = frappe.db.get_all('Business Segment Mapping List')
 	body = {}
 	
 	
-	for item in dealstage.split(','):
+	for item in mapping_list:
+		print(f'ITEM={item}')
+		mapping = frappe.get_doc('Business Segment Mapping List',item['name'])
+		code = mapping.won_deal_stage_code
 		filtergroup=[]
 		filters={
 		"filters": [
 			{
 			"propertyName": "dealstage",
 			"operator": "EQ",
-			"value": item
+			"value": code
 			}
 		]
 		}
@@ -35,7 +38,7 @@ def fetch_won_deals():
 
 		body['filterGroups']=filtergroup
 
-		print(body)
+		print(f'BODY={body}')
 
 		endpoint = doc.deals_api_endpoint
 		access_token = doc.access_token
@@ -63,6 +66,8 @@ def fetch_won_deals():
 				thisdoc = frappe.new_doc('Deal')
 				thisdoc.deal_id=item['id']
 				thisdoc.status='NEW'
+				thisdoc.business_segment=mapping.business_segment
+				thisdoc.naming_series=mapping.business_segment_naming_series
 				try:
 					thisdoc = frappe.get_doc('Deal',item['id'])
 				except:
@@ -156,3 +161,5 @@ def fetch_companies():
 
 	doc.companies_latest_index = index
 	doc.save()
+
+

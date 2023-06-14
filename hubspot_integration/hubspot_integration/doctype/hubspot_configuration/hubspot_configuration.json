@@ -9,7 +9,7 @@
  "field_order": [
   "access_token",
   "deals_api_endpoint",
-  "deal_stage_search_value",
+  "business_segment_mapping",
   "companies_api_endpoint",
   "companies_latest_index"
  ],
@@ -29,13 +29,6 @@
    "reqd": 1
   },
   {
-   "fieldname": "deal_stage_search_value",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Deal Stage Search Value",
-   "reqd": 1
-  },
-  {
    "fieldname": "companies_api_endpoint",
    "fieldtype": "Data",
    "label": "Companies API Endpoint",
@@ -45,12 +38,18 @@
    "fieldname": "companies_latest_index",
    "fieldtype": "Data",
    "label": "Companies Latest Index"
+  },
+  {
+   "fieldname": "business_segment_mapping",
+   "fieldtype": "Table",
+   "label": "Business Segment Mapping",
+   "options": "Business Segment Mapping List"
   }
  ],
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2023-05-26 09:13:47.306564",
+ "modified": "2023-06-14 15:24:08.090725",
  "modified_by": "Administrator",
  "module": "Hubspot Integration",
  "name": "Hubspot Configuration",

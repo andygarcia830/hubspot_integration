@@ -11,7 +11,7 @@ frappe.ui.form.on("Deal", {
                 },
                 callback:function(r){
                     console.log(r.message.name)
-                    window.location = '/app/sales-order/new-sales-order-1?customer='+r.message.name+'&amount='+frm.doc.amount+'&transaction_date='+frm.doc.close_date+"&deal="+frm.doc.name
+                    window.location = '/app/sales-order/new-sales-order-1?customer='+r.message.name+'&amount='+frm.doc.amount+'&transaction_date='+frm.doc.close_date+"&deal="+frm.doc.name+"&business_segment="+frm.doc.business_segment+"&naming_series="+frm.doc.naming_series
                 }
                 })
                 
@@ -19,5 +19,8 @@ frappe.ui.form.on("Deal", {
                 
             
         );
+        
+
+        
 	},
 });
