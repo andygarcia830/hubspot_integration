@@ -28,6 +28,7 @@ def fetch_customer(name):
 	print(tokens[0])
 	customer=search_db(tokens[0])
 	print(f'CUSTOMER={customer}')
+	enable_customer(customer)
 	return customer 
 
 def search_db(tok):
